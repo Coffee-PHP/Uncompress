@@ -38,8 +38,6 @@ interface StringUncompressorInterface
     /**
      * Uncompress the given string.
      *
-     * @param string $string The compressed string.
-     * @return string The uncompressed string.
      * @throws UncompressException
      */
     public function uncompressString(string $string): string;

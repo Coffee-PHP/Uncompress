@@ -31,10 +31,6 @@ namespace CoffeePhp\Uncompress\Contract;
  * @author Danny Damsky <dannydamsky99@gmail.com>
  * @since 2020-09-09
  */
-interface UncompressorInterface extends
-    PathUncompressorInterface,
-    DirectoryUncompressorInterface,
-    FileUncompressorInterface,
-    StringUncompressorInterface
+interface UncompressorInterface extends PathUncompressorInterface, StringUncompressorInterface
 {
 }

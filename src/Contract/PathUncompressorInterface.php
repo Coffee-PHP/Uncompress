@@ -25,24 +25,12 @@ declare(strict_types=1);
 
 namespace CoffeePhp\Uncompress\Contract;
 
-use CoffeePhp\FileSystem\Contract\Data\Path\FileInterface;
-use CoffeePhp\FileSystem\Contract\Data\Path\PathInterface;
-use CoffeePhp\Uncompress\Exception\UncompressException;
-
 /**
  * Interface PathUncompressorInterface
  * @package coffeephp\uncompress
  * @author Danny Damsky <dannydamsky99@gmail.com>
  * @since 2020-09-09
  */
-interface PathUncompressorInterface
+interface PathUncompressorInterface extends DirectoryUncompressorInterface, FileUncompressorInterface
 {
-    /**
-     * Uncompress the given path.
-     *
-     * @param FileInterface $compressedPath The path to uncompress.
-     * @return PathInterface The uncompressed path.
-     * @throws UncompressException
-     */
-    public function uncompressPath(FileInterface $compressedPath): PathInterface;
 }

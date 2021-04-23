@@ -1,5 +1,7 @@
 # Coffee PHP - Uncompress
 
+![Build](https://github.com/Coffee-PHP/Uncompress/workflows/Build/badge.svg)
+
 Provides an interface for uncompressor classes to implement.
 
 ```

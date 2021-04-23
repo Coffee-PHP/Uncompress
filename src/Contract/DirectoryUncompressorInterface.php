@@ -25,8 +25,6 @@ declare(strict_types=1);
 
 namespace CoffeePhp\Uncompress\Contract;
 
-use CoffeePhp\FileSystem\Contract\Data\Path\DirectoryInterface;
-use CoffeePhp\FileSystem\Contract\Data\Path\FileInterface;
 use CoffeePhp\Uncompress\Exception\UncompressException;
 
 /**
@@ -38,11 +36,10 @@ use CoffeePhp\Uncompress\Exception\UncompressException;
 interface DirectoryUncompressorInterface
 {
     /**
-     * Uncompress the given directory.
+     * Uncompress the given directory and
+     * get the path of the uncompressed directory.
      *
-     * @param FileInterface $compressedDirectory The directory to uncompress.
-     * @return DirectoryInterface The uncompressed directory.
      * @throws UncompressException
      */
-    public function uncompressDirectory(FileInterface $compressedDirectory): DirectoryInterface;
+    public function uncompressDirectory(string $compressedDirectoryFilePath): string;
 }

@@ -25,7 +25,6 @@ declare(strict_types=1);
 
 namespace CoffeePhp\Uncompress\Contract;
 
-use CoffeePhp\FileSystem\Contract\Data\Path\FileInterface;
 use CoffeePhp\Uncompress\Exception\UncompressException;
 
 /**
@@ -37,11 +36,10 @@ use CoffeePhp\Uncompress\Exception\UncompressException;
 interface FileUncompressorInterface
 {
     /**
-     * Uncompress the given file.
+     * Uncompress the given file
+     * and get the path of the uncompressed file.
      *
-     * @param FileInterface $compressedFile The file to uncompress.
-     * @return FileInterface The uncompressed file.
      * @throws UncompressException
      */
-    public function uncompressFile(FileInterface $compressedFile): FileInterface;
+    public function uncompressFile(string $compressedFilePath): string;
 }
